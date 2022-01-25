@@ -4,12 +4,10 @@ import './index.css';
 import App from './App';
 
 
+
 ReactDOM.render(
 
-
-  <App />,
- 
-   
+  <App login = "eveporcello" />,
   document.getElementById('root')
 );
 
