@@ -1,34 +1,19 @@
 
 import './App.css';
-import React, {useState, useEffect} from 'react';
+import {BiArchive} from "react-icons/bi";
+import {Button} from "react-bootstrap";
 
-// https://api.github.com/users/
 
-function App({login}) {
-  const [data, setData] = useState (null);
 
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${login}`)
-      .then ((response) => response.json())
-      .then (setData);
 
-  }, []);
-
-  if (data){
-    return (<div>
-      <h1>{data.name}</h1>
-      <p>{data.location}</p>
-      <img alt = {data.login} src = {data.avatar_url} height = "240px" />
-    </div>)
-  }
-
+function App() {
   return(
-    <div>
-      No user available.
+    <div className = "App container mx-auto mt-3 font-thin">
+      <h1 className = "text-5xL"><BiArchive className = "inline-block"/> Your Appointments</h1>
+      <button>Button</button>
+      
 
     </div>
- 
-    
   )
 }
   
